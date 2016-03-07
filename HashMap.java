@@ -9,7 +9,7 @@ public class HashMap
 {
     private String[] clave;
     private int[] valor;
-    
+
     /**
      * Constructor for objects of class HashMap
      */
@@ -18,44 +18,44 @@ public class HashMap
         clave = new String[0];
         valor = new int[0];
     }
-    
+
     public void put(String clave, int valor)
     {
         
     }
-    
+
     public void get(String clave)
     {
-    
+        
     }
-    
+
     public void isEmpty()
     {
-    
+
     }
-    
-    public void size()
+
+    public int size()
     {
-    
+        return clave.length;
     }
-    
+
     public void remove(String clave)
     {
-    
+
     }
-    
+
     public void clear()
     {
-    
+
     }
-   
+
     public void containsKey(String clave)
     {
-    
+
     }
-    
+
     public void containsValue(int valor)
     {
-    
+
     }
 }
