@@ -21,12 +21,49 @@ public class HashMap
 
     public void put(String clave, int valor)
     {
-        
+        int index = 0;
+        boolean found = false;
+        while (index < this.clave.length && !found )
+        {
+            if (clave.equals(this.clave[index]))
+            {
+                found = true;
+                this.valor[index] = valor;
+            }
+            index++;
+        }
+        if (!found)
+        {
+            index = -1;
+            int cont = 0;
+            String[] claveLocal = new String[this.clave.length + 1];
+            int[] valorLocal = new int[this.valor.length + 1];
+            for (cont = 0; cont < this.clave.length; cont++)
+            {
+                claveLocal[cont] = this.clave[cont];
+                valorLocal[cont] = this.valor[cont];
+            }
+            claveLocal[claveLocal.length - 1] = clave;
+            valorLocal[valorLocal.length - 1] = valor;
+            this.clave = claveLocal;
+            this.valor = valorLocal;
+        }
+        return index;
     }
 
-    public void get(String clave)
+    public int get(String clave)
     {
-        
+        int ret = -1;
+        int index = 0;
+        boolean found = false;
+        while (indice < this.clave.length && !encontrado ) {
+            if (this.clave.equals(claves[indice])) {
+                found = true;
+                ret = valores[indice];
+            }
+            index++;
+        }
+        return ret;
     }
 
     public void isEmpty()
