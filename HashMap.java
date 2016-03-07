@@ -46,7 +46,8 @@ public class HashMap
 
     public void clear()
     {
-
+        clave = new String[0];
+        valor = new int[0];
     }
 
     public void containsKey(String clave)
