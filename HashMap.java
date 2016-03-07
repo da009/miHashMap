@@ -19,7 +19,7 @@ public class HashMap
         valor = new int[0];
     }
 
-    public void put(String clave, int valor)
+    public int put(String clave, int valor)
     {
         int index = 0;
         boolean found = false;
@@ -56,19 +56,19 @@ public class HashMap
         int ret = -1;
         int index = 0;
         boolean found = false;
-        while (indice < this.clave.length && !encontrado ) {
-            if (this.clave.equals(claves[indice])) {
+        while (index < this.clave.length && !found ) {
+            if (this.clave.equals(this.clave[index])) {
                 found = true;
-                ret = valores[indice];
+                ret = valor[index];
             }
             index++;
         }
         return ret;
     }
 
-    public void isEmpty()
+    public boolean isEmpty()
     {
-
+        return (clave.length == 0);
     }
 
     public int size()
